@@ -1,0 +1,116 @@
+body{
+    font-family:"Roboto", sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+   }  
+
+.conatiner{
+    flex: 1;
+}
+.navbar{
+    height: 5rem;
+    background-color: white;
+}
+.fa-hotel{
+    color: rgb(28, 156, 73);
+    font-size: 2rem;
+}
+.nav-link{
+    color: black !important;
+    font-weight: 800;
+}
+.main-image{
+    margin-left: 1rem !important;
+     margin-right: 1rem !important;
+}
+
+/* footer..................................................................................................... */
+
+.f-info-links a{
+    text-decoration: none;
+    color: black;
+}
+.f-info-links a:hover{
+    text-decoration: underline;
+}
+.f-info{
+    display: flex;
+    height: 8rem;
+    background-color: lightgrey;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+}
+.f-info-social{
+    font-size: 1.6rem;
+}
+
+/* cards ..........................................................................................*/
+.listing-card{
+border: none !important;
+margin-bottom: 2rem
+
+}
+
+.card-img-top{
+    border-radius: 1rem !important;
+    width: 100% !important;
+    object-fit: cover !important;
+    height: 20rem;
+
+}
+.card-body{
+    padding: 0 !important;
+}
+.card-price{
+font-weight: 400 !important;
+}
+.card-title{
+    font-weight: 600 !important;
+}
+/* viewmore button image hover */
+
+.cardbtn-primary{
+    background-color: rgb(28, 156, 73)!important;
+    text-decoration: none;
+    color: white;
+    padding: 0.5rem;
+    border-radius: 1rem;
+}
+.cardbtn-primary:hover{
+    padding: 0.6rem;
+     background-color:rgb(28, 156, 73) !important;
+
+}
+.card-img-overlay:hover{
+    background-color: rgba(255, 255, 255, 0.363);
+}
+/* newform wla btn h */
+.add-btn{
+    background-color: rgb(28, 156, 73);
+    border: 1px solid black;
+    padding: 0.5rem 1rem 0.5rem 1rem !important;
+}
+.add-btn:hover{
+      background-color:rgb(28, 156, 73) !important;
+}
+
+/* formshow more wla  */
+.show-img{
+    height: 40vh ;
+}
+.bold{
+    font-weight: 600;
+}
+.col1{
+    display: flex;
+    gap: 2rem;
+}
+.add-btnn{
+    background-color: rgba(17, 16, 16, 0.918) !important;
+    border: 1px solid black;
+    padding: 0.5rem 1rem 0.5rem 1rem !important;
+}

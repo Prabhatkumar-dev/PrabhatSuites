@@ -1,0 +1,44 @@
+<% layout("/layouts/boilerplate")%>
+<body>
+    
+    <div class="row">
+        <div class="col-5 offset-2">
+            <h2><b>Edit Your Hotel Details</b></h2><br>
+   <form method="Post" action="/Listings/<%=edit._id%>?_method=PUT" novalidate class="needs-validation" enctype="multipart/form-data">
+        <!-- method override -->
+          <div class="mb-3">
+           <label for="title" class="form-label">Title</label>
+            <input type="text" name="listing[title]" value="<%=edit.title%>" class="form-control" required>
+            <div class="valid-feedback">Title is good!</div><br>
+          </div>
+          <div class="mb-3">
+           <label for="description" class="form-label">Description</label>
+           <textarea name="listing[description]"  class="form-control"><%=edit.description%></textarea>
+         </div>
+         <div class="mb-3">
+           <p>Original Image</p>
+         <img src="<%=originalImageUrl%>" alt="">
+         </div>
+         <div class="mb-3">
+          <label for="image" class="form-label">Upload New Image</label>
+                 <input type="file" name="listing[image]"  class="form-control" >
+         </div>
+
+         <div class="mb-3">
+            <label for="price" class="form-label">Price</label>
+                <input type="number" name="listing[price]" value="<%=edit.price%>" class="form-control" required>
+                <div class="invalid-feedback">Enter price in number!</div>
+         </div>
+          <div class="mb-3">
+             <label for="location" class="form-label">Location</label>
+            <input type="text" name="listing[location]" value="<%=edit.location%>" class="form-control" required>
+          </div>
+          <div class="mb-3">
+             <label for="country" class="form-label">Country</label>
+             <input type="text" name="listing[country]" value="<%=edit.country%>" class="form-control" required>
+          </div>
+       <button class="btn btn-dark add-btn">Edit</button>
+        
+    </form>
+</body>
+</div></div>

@@ -1,0 +1,98 @@
+<!-- navbar ka code h jisko abhi boilerplate se connect krenge -->
+<style>
+  .hh{
+    font-size: 1.6rem;
+    font-weight: 900;
+    font-family: 'Courier New', Courier, monospace;
+   color: white !important;
+  }
+  nav a:hover{
+    color: greenyellow !important;
+  }
+  .link-color{
+ color: white !important;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+  }
+  .colour{
+    background-color: rgba(0, 0, 0, 0.885) !important;
+  }
+  .bttn{
+    color: white;
+    background-color:rgb(28, 156, 73);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    border-radius: 1rem;
+  }
+  .search-i{
+    border-radius: 1rem;
+    
+    padding: 0.5rem 2.5rem 0.4rem 2.5rem;
+  }
+   .bttn:hover{
+    color: rgb(6, 6, 6);
+    background-color:rgb(28, 156, 73);
+    font-weight: 600;
+    box-shadow: 1px 1px 1px rgb(28, 156, 73);
+  }
+  @media(max-width:766px){
+    
+    .colour{
+    background-color: rgba(232, 229, 229, 0.885) !important;
+   
+  }
+   .link-color{
+    background-color: rgba(232, 229, 229, 0.885) !important;
+ color: black !important;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+  }
+   .hh{
+   background-color: rgba(232, 229, 229, 0.885) !important;
+   color: rgb(0, 0, 0) !important;
+  }
+   nav a:hover{
+    color: black !important;
+    font-size: 18px;
+    background-color: rgba(0, 0, 0, 0.486);
+  }}
+
+</style>
+<nav class="navbar navbar-expand-md navbar-light bg-light border-bottom sticky-top colour">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/Listings"><i class="fa-solid fa-hotel"></i></a>
+    
+    <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon "></span>
+    </button>
+    <div class="collapse navbar-collapse  " id="navbarNavAltMarkup">
+      <div class="navbar-nav ">
+
+        <a class="nav-link   hh" href="/Listings">PrabhatSuites</a>
+       
+      </div>
+      <div  class="navbar-nav ms-auto  link-color ">
+        <form class="d-flex" role="search">
+          <input class="form-control me-2  search-i" type="search" placeholder="Search Destinations" aria-label="Search">
+          <button class="btn bttn " type="submit"><i class="fas fa-search"></i>Search</button>
+        </form></div>
+
+      <div class="navbar-nav ms-auto">
+         <a class="nav-link  link-color" href="/Listings/new"">Collab with us </a>
+        <% if(! curentuserinfo){%>
+          <a class="nav-link   link-color "  href="/signup"><b>Sign up</b></a>
+          <a class="nav-link  link-color" href="/login"><b>Login</b></a>
+          
+          <%}%>
+        <% if(curentuserinfo){%>
+        <a class="nav-link  link-color " href="/Logout""><b>Log out</b></a>
+        <%}%>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+  

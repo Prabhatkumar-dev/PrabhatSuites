@@ -1,0 +1,242 @@
+
+<% layout("/layouts/boilerplate")%>
+
+<style>
+
+  .filters{
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+    opacity: 0.6;
+     flex-shrink: 0;
+    
+  }
+  .filters:hover{
+    opacity: 1;
+    cursor: pointer;
+  }
+  
+  #filter{
+    margin-top: 1rem;
+    display: flex;
+    margin-left: 1rem !important;
+    margin-right: 1rem !important;
+    overflow-x: auto;
+    overflow-y: hidden;
+    flex-wrap: nowrap;
+  }
+  #filter::-webkit-scrollbar{
+    display: none;
+}
+  .gst-text{
+    display: none;
+  }
+  .tax-toggle{
+    display: flex;
+    align-items: center;
+    border: 0.1rem solid black;
+    border-radius: 0.6rem;
+    height: 3.2rem;
+    padding-left: 10px;
+    padding-right: 1rem;
+    font-size: 1rem;
+    margin-left: auto;
+    margin-right: 1.5rem;
+    margin-top: 0.6rem;
+    text-wrap: nowrap !important;
+  }
+  #unfilter{
+    display: none;
+  }
+ 
+ @media(max-width:766px){
+#filter{
+  display: none;
+}
+#unfilter{
+   margin-top: 1rem;
+    display: flex;
+    margin-left: 1.5rem !important;
+    margin-right: 1.5rem !important;
+}
+.unfilters{
+ margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    opacity: 0.6;
+     flex-shrink: 0;
+}
+.unfilters:hover{
+    opacity: 1;
+    cursor: pointer;
+  }
+  
+
+ }
+
+</style>
+
+
+<body>
+   <div id="unfilter">
+  
+     <div class="unfilters">
+     <i class="fa-solid fa-bed"></i>
+      Rooms
+    </div>
+    <div class="unfilters">
+     <i class="fa-solid fa-location-dot"></i>
+      Hotels
+    </div>
+    <div class="unfilters">
+     <i class="fa-solid fa-location-dot"></i>
+      Hotels
+    </div>
+      <div class="unfilters">
+     <i class="fa-solid fa-truck-fast"></i>
+      Services
+    </div>
+    <div class="tax-toggle">
+  <div class="form-check-reverse form-switch ">
+  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" unchecked>
+  <label class="form-check-label tt" for="flexSwitchCheckDefault">Display after Taxes</label>
+</div>
+</div>
+  </div>
+
+  <div id="filter">
+    <div class="filters">
+      <i class="fa-solid fa-fire"></i>
+      Trending
+    </div>
+     <div class="filters">
+     <i class="fa-solid fa-bed"></i>
+      Rooms
+    </div>
+    <div class="filters">
+      <i class="fa-solid fa-cart-flatbed"></i>
+     Lugguage
+    </div>
+    <div class="filters">
+     <i class="fa-solid fa-car"></i>
+     Pickup
+    </div>
+    <div class="filters">
+     <i class="fa-solid fa-calendar"></i>
+      Booking
+    </div>
+    <div class="filters">
+     <i class="fa-solid fa-location-dot"></i>
+      Hotels
+    </div>
+      <div class="filters">
+     <i class="fa-solid fa-truck-fast"></i>
+      Services
+    </div>
+      <div class="filters">
+    <i class="fa-solid fa-plane"></i>
+      Travelling
+    </div>
+     <div class="filters">
+   <i class="fa-solid fa-tree"></i>
+      Mountains
+    </div>
+     <div class="filters">
+   <i class="fa-solid fa-city"></i>
+      Cities
+    </div>
+       <div class="filters">
+  <i class="fa-solid fa-snowflake"></i>
+      Hills</i>
+    </div>
+       <div class="filters">
+  <i class="fa-solid fa-umbrella-beach"></i>
+      Beaches
+    </div>
+
+
+     <div class="filters">
+<i class="fa-solid fa-calendar-days"></i>
+      Bookings
+    </div>
+      <div class="filters">
+ <i class="fa-solid fa-suitcase"></i>
+      Secuirity
+    </div>
+
+      <div class="filters">
+<i class="fa-solid fa-camera-retro"></i>
+      Iconic
+    </div>
+      <div class="filters">
+<i class="fa-solid fa-circle-user"></i>
+      Account
+    </div>
+
+<div class="tax-toggle">
+  <div class="form-check-reverse form-switch ">
+  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" unchecked>
+  <label class="form-check-label" for="flexSwitchCheckDefault">Display after Taxes</label>
+</div>
+</div>
+
+  </div>
+  
+  <!-- <form  method="GET"  action="/Listings/new"><button>Add new Hotel</button></form> -->
+ <div class="row row-cols-lg-3  mt-3 row row-cols-md-3 row row-cols-sm-1 main-image" >
+    <%for(list of alllistings){%>
+<div class="card col listing-card" ">
+
+  <img src="<%=list.image.url%>" class="card-img-top" >
+  <!-- <div class="card-img-overlay">  
+  </div> -->
+  <div class="card-body">
+   <b> <p class="card-title"><%=list.title%></p></b>
+  <p>Price : &#8377 <%=list.price.toLocaleString("en-IN")%>/per night
+      &nbsp;  &nbsp;<i class="gst-text">( +18% GST )</i></p>
+    <a href="/Listings/show<%=list._id%>" class="cardbtn-primary"  bg-color="red">View More</a>
+  </div>
+</div>
+   <%}%>
+ </div>
+</body>
+
+<script>
+  
+  let btn = document.querySelector("#filter #flexSwitchCheckDefault");
+  btn.addEventListener("click",()=>{
+   
+    let text = document.getElementsByClassName("gst-text");
+  
+for(t of text){
+  if(t.style.display != "inline"){
+  t.style.display ="inline";}
+  else{
+    t.style.display ="none";
+  }
+}
+   
+  })
+   let btnn = document.querySelector("#unfilter #flexSwitchCheckDefault");
+  btnn.addEventListener("click",()=>{
+   
+    let textt = document.getElementsByClassName("gst-text");
+  
+for(t of textt){
+  if(t.style.display != "inline"){
+  t.style.display ="inline";}
+  else{
+    t.style.display ="none";
+  }
+}
+   
+  })
+</script>
+
+
+
+
