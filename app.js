@@ -86,7 +86,9 @@ app.use((req,res,next)=>{
 
 
 
-
+app.get("/", (req,res)=>{
+    res.redirect("/listings");
+})
 app.use("/listings" , listingsRouter);                            ///is line sirf kaam hoga sara listing wla linmkr diya h na isliye
 app.use("/" , userRouter); 
 app.use("/Listings/:id/reviews" , reviewsRouter);  
