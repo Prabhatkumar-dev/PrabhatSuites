@@ -50,32 +50,50 @@
   #unfilter{
     display: none;
   }
- 
- @media(max-width:766px){
-#filter{
-  display: none;
-}
-#unfilter{
-   margin-top: 1rem;
-    display: flex;
-    margin-left: 1.5rem !important;
-    margin-right: 1.5rem !important;
-}
-.unfilters{
- margin: 1rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    align-items: center;
-    opacity: 0.6;
-     flex-shrink: 0;
-}
-.unfilters:hover{
-    opacity: 1;
-    cursor: pointer;
-  }
+ .change{
+   margin-left: 1rem !important;
+   margin-right: 1rem !important;
+ }
+  
+  @media(max-width:766px){
+    #filter{
+      display: none;
+    }
+    #unfilter{
+      margin-top: 1rem;
+      display: flex;
+      margin-left: 1.5rem !important;
+      margin-right: 1.5rem !important;
+      overflow-x: auto;
+      overflow-y: hidden;
+      flex-wrap: nowrap;
+    }
+    #unfilter::-webkit-scrollbar{
+      display: none;
+    }
+    .unfilters{
+      margin: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      align-items: center;
+      opacity: 0.6;
+      flex-shrink: 0;
+    }
+    .unfilters:hover{
+      opacity: 1;
+      cursor: pointer;
+     
+    }
   
 
+ }
+ @media(max-width : 580px){
+   .change{
+       flex-direction: column;
+       margin-left: 1rem !important;
+       margin-right: 1rem !important;
+      }
  }
 
 </style>
@@ -187,9 +205,10 @@
   </div>
   
   <!-- <form  method="GET"  action="/Listings/new"><button>Add new Hotel</button></form> -->
- <div class="row row-cols-lg-3  mt-3 row row-cols-md-3 row row-cols-sm-1 main-image" >
+   <div id="allcards ">
+ <div class="row row-cols-lg-4  mt-3 row row-cols-md-3 row row-cols-sm-1  change " >
     <%for(list of alllistings){%>
-<div class="card col listing-card" ">
+<div class="card col listing-card " >
 
   <img src="<%=list.image.url%>" class="card-img-top" >
   <!-- <div class="card-img-overlay">  
@@ -202,6 +221,7 @@
   </div>
 </div>
    <%}%>
+ </div>
  </div>
 </body>
 

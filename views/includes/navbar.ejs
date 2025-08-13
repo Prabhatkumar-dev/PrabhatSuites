@@ -37,21 +37,35 @@
     font-weight: 600;
     box-shadow: 1px 1px 1px rgb(28, 156, 73);
   }
-  @media(max-width:766px){
+  .namee{
+    display: none;
+  }
+  @media(max-width:767px){
     
-    .colour{
+    .namee{
+         display: inline;
+        
+         font-family: "Playwrite HU", cursive;
+            font-optical-sizing: auto;
+           font-style:italic;
+           font-weight: 700;
+         color: rgb(13, 13, 13) !important;
+    }
+    
+  .colour{
     background-color: rgba(232, 229, 229, 0.885) !important;
    
   }
-   .link-color{
+  .link-color{
     background-color: rgba(232, 229, 229, 0.885) !important;
- color: black !important;
+    color: black !important;
     font-family: 'Courier New', Courier, monospace;
     font-weight: 600;
   }
    .hh{
    background-color: rgba(232, 229, 229, 0.885) !important;
    color: rgb(0, 0, 0) !important;
+   display: none;
   }
    nav a:hover{
     color: black !important;
@@ -63,6 +77,7 @@
 <nav class="navbar navbar-expand-md navbar-light bg-light border-bottom sticky-top colour">
   <div class="container-fluid">
     <a class="navbar-brand" href="/Listings"><i class="fa-solid fa-hotel"></i></a>
+    <h3 class="namee">PrabhatSuites</h3>
     
     <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon "></span>
@@ -70,7 +85,8 @@
     <div class="collapse navbar-collapse  " id="navbarNavAltMarkup">
       <div class="navbar-nav ">
 
-        <a class="nav-link   hh" href="/Listings">PrabhatSuites</a>
+        <a class="nav-link   hh  dd" href="/Listings">PrabhatSuites</a>
+        
        
       </div>
       <div  class="navbar-nav ms-auto  link-color ">

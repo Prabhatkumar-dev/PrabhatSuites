@@ -23,6 +23,7 @@ body{
 .main-image{
     margin-left: 1rem !important;
      margin-right: 1rem !important;
+    
 }
 
 /* footer..................................................................................................... */
@@ -51,7 +52,7 @@ body{
 /* cards ..........................................................................................*/
 .listing-card{
 border: none !important;
-margin-bottom: 2rem
+margin-bottom: 2rem;
 
 }
 
@@ -59,7 +60,7 @@ margin-bottom: 2rem
     border-radius: 1rem !important;
     width: 100% !important;
     object-fit: cover !important;
-    height: 20rem;
+    height: auto;
 
 }
 .card-body{
@@ -100,7 +101,7 @@ font-weight: 400 !important;
 
 /* formshow more wla  */
 .show-img{
-    height: 40vh ;
+    width: 40vw ;
 }
 .bold{
     font-weight: 600;
@@ -113,4 +114,41 @@ font-weight: 400 !important;
     background-color: rgba(17, 16, 16, 0.918) !important;
     border: 1px solid black;
     padding: 0.5rem 1rem 0.5rem 1rem !important;
+}
+p span{
+    font-weight: 600;
+}
+  
+@media(max-width:600px){
+    .show-img{
+    
+    height: 30vh !important;
+    width: 40vh !important;}
+   
+}
+@media(max-width:580px){
+    .resp{
+      margin-left: 2rem !important;
+      margin-right: 1rem !important;
+       
+    }
+    .inn{
+        width: 100% !important;
+    }
+}
+.reserve{
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+}
+.reserve button{
+    padding: 0.6rem 1rem 0.6rem 1rem;
+    background-color: rgb(185, 38, 38);
+    
+    border-radius: 12px ;
+    color: rgb(226, 235, 243);
+    font-weight: 600;
+}
+.reserve button:hover{
+   background-color: rgb(28, 156, 73);
 }
