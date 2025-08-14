@@ -1,7 +1,11 @@
 # PrabhatSuites
 
 PrabhatSuites is a Full Stack  hotel listing , Booking and reviewing web application built with Node.js, Express, and MongoDB. Users can browse hotel listings, view details, leave reviews, and manage their accounts.
+ ##TechStack 
+ Tech Stack used for Frontend are : HTML , CSS , JS .
+ Tech Stack used for Backend are  : Nodejs , Expressjs , MongoDB , RestAPI .
 
+Live on  : https://prabhatsuites.onrender.com 
 ## Features
 
 - User authentication and registration
@@ -78,25 +82,8 @@ Prabhats/
 
 ### Installation
 
-1. Clone the repository:
-    ```sh
-    git clone <repo-url>
-    cd Prabhats
-    ```
+npm start
 
-2. Install dependencies:
-    ```sh
-    npm install
-    ```
-
-3. Set up environment variables in a `.env` file (see `.env.example` if available).
-
-4. Start the development server:
-    ```sh
-    npm start
-    ```
-
-5. Visit `http://localhost:3000` in your browser.
 
 ## License
 
